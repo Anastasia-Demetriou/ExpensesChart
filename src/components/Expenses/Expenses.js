@@ -22,10 +22,10 @@ function Expenses(props) {
         <ExpensesFilter
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
-        /> 
-        <ExpensesChart expenses={filteredExpenses}/>
+        />
+        <ExpensesChart expenses={filteredExpenses} />
 
-        {filteredExpenses.lenght === 0 && <p>No expenses found. </p>}
+        {filteredExpenses.length === 0 && <p>No expenses found. </p>}
         {filteredExpenses.length > 0 &&
           filteredExpenses.map((expense) => (
             <ExpenseItem
